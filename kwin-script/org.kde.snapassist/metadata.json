@@ -1,0 +1,20 @@
+{
+    "KPackageStructure": "KWin/Script",
+    "X-Plasma-API": "declarativescript",
+    "X-KDE-ConfigModule": "kwin/effects/configs/kcm_kwin4_genericscripted",
+    "KPlugin": {
+        "Id": "org.kde.snapassist",
+        "Name": "Snap Assist",
+        "Description": "Suggests other open windows to fill the remaining screen space after snapping a window to a screen edge or corner.",
+        "Authors": [
+            {
+                "Name": "Rocco Rakete",
+                "Email": "m.schaumann@mscloud.uk"
+            }
+        ],
+        "License": "GPL-2.0-or-later",
+        "Icon": "preferences-system-windows",
+        "Version": "0.1.0",
+        "EnabledByDefault": true
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "KPackageStructure": "KWin/Effect",
+    "X-Plasma-API": "javascript",
+    "X-KDE-Ordering": 60,
+    "KPlugin": {
+        "Id": "org.kde.snapassist.placementeffect",
+        "Category": "Appearance",
+        "Name": "Snap Assist Placement Animation",
+        "Description": "Optional smooth animation when a window is moved/resized into place, including by Snap Assist. Disabled by default since some setups already animate quick-tiling.",
+        "Authors": [
+            {
+                "Name": "Martin Baumann",
+                "Email": "maddinbaumann96@gmail.com"
+            }
+        ],
+        "License": "GPL-2.0-or-later",
+        "Icon": "preferences-system-windows-effect-scale",
+        "Version": "0.1.0",
+        "EnabledByDefault": false
+    }
+}
