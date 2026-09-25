@@ -52,13 +52,15 @@ change made here.
 
 ## Commands
 
-There is no build/lint/test tooling in this repo (none is available for KWin
-QML packages in general). Validation is manual:
+Apart from the Nix flake (packaging + the `geometry.js`/`layout.js` QML
+tests), there is no build/lint tooling. Validation of live behavior is manual:
 
 ```sh
 ./install.sh                # install + enable the KWin script only, then force-reload it
 ./install.sh --with-effect  # also install the optional placement-animation effect
 ./uninstall.sh               # remove both packages
+nix build                    # package: $out/share/kwin/{scripts,effects}/<Id>
+nix flake check              # runs the QML tests in the sandbox
 
 ./dev-nested-kwin.sh          # launch a disposable nested KWin Wayland compositor
                                # for safe testing — NEVER reload/replace KWin on the

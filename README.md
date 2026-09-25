@@ -44,6 +44,27 @@ Placement Animation").
 
 To remove: `./uninstall.sh`.
 
+### NixOS (flake)
+
+```nix
+# flake.nix
+inputs.snap-assist = {
+  url = "github:RoccoRakete/plasma-snap-assist";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
+
+# NixOS configuration
+environment.systemPackages = [
+  inputs.snap-assist.packages.${pkgs.stdenv.hostPlatform.system}.default
+];
+```
+
+This installs the script (enabled by default) and the placement animation
+effect (disabled by default, toggle it under System Settings > Desktop
+Effects). A copy installed with `./install.sh` in `~/.local/share/kwin/...`
+takes precedence over the system one, so remove it with `./uninstall.sh`
+after switching.
+
 ## Configuration
 
 - **Enabled** - master on/off switch.
